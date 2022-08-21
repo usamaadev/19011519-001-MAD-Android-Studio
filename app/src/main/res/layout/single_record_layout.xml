@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/tv_sr_no"
+            android:layout_column="1"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_roll_no"
+            android:layout_column="2"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tv_name"
+
+            android:layout_column="3"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_father_name"
+
+            android:layout_column="4"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_registration_no"
+
+            android:layout_column="5"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_column="6"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+
+             />
+
+        <TextView
+            android:id="@+id/tv_cnic_no"
+            android:layout_column="7"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_column="8"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="160dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_marital_status"
+            android:layout_column="9"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_religion"
+            android:layout_column="10"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_blood_group"
+            android:layout_column="11"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_ptcl_no"
+            android:layout_column="12"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+        <TextView
+            android:id="@+id/tv_cell_no"
+            android:layout_column="13"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_uog_email"
+            android:layout_column="14"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="160dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_personal_email"
+            android:layout_column="15"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="160dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_degree_title"
+            android:layout_column="16"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_session"
+            android:layout_column="17"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_program"
+            android:layout_column="18"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_campus_name"
+            android:layout_column="19"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_department_name"
+            android:layout_column="20"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_faculty_name"
+            android:layout_column="21"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_challan_no"
+            android:layout_column="22"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_challan_date"
+            android:layout_column="23"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_degree_status"
+            android:layout_column="24"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="110dp"
+             />
+
+
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="visible"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/txt_roll_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll No."
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/txt_stu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Name"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            app:layout_column="0"
+            app:layout_row="4" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            app:layout_column="0"
+            app:layout_row="6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Religion"
+            app:layout_column="0"
+            app:layout_row="8" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PTCL No."
+            app:layout_column="0"
+            app:layout_row="10" />
+
+        <EditText
+            android:id="@+id/txt_ptcl_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="0"
+            app:layout_row="11" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UOG Email"
+            app:layout_column="0"
+            app:layout_row="12" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Degree Title"
+            app:layout_column="0"
+            app:layout_row="14" />
+
+        <EditText
+            android:id="@+id/txt_degree_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="0"
+            app:layout_row="15" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Program"
+            app:layout_column="0"
+            app:layout_row="16" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dept. Name"
+            app:layout_column="0"
+            app:layout_row="18" />
+
+        <EditText
+            android:id="@+id/txt_dept_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="0"
+            app:layout_row="19" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Challan No."
+            app:layout_column="0"
+            app:layout_row="20" />
+
+        <EditText
+            android:id="@+id/txt_challan_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_column="0"
+            app:layout_row="21" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Degree Status"
+            app:layout_column="0"
+            app:layout_row="22" />
+
+        <EditText
+            android:id="@+id/txt_degree_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="0"
+            app:layout_row="23" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration No."
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/txt_registration_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Father's Name"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <EditText
+            android:id="@+id/txt_father_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CNIC No."
+            app:layout_column="1"
+            app:layout_row="4" />
+
+        <EditText
+            android:id="@+id/txt_cnic_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="1"
+            app:layout_row="5" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marital Status"
+            app:layout_column="1"
+            app:layout_row="6" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Group"
+            app:layout_column="1"
+            app:layout_row="8" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cell No."
+            app:layout_column="1"
+            app:layout_row="10" />
+
+        <EditText
+            android:id="@+id/txt_cell_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="1"
+            app:layout_row="11" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Email"
+            app:layout_column="1"
+            app:layout_row="12" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Session"
+            app:layout_column="1"
+            app:layout_row="14" />
+
+        <EditText
+            android:id="@+id/txt_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_column="1"
+            app:layout_row="15" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Campus Name"
+            app:layout_column="1"
+            app:layout_row="16" />
+
+        <EditText
+            android:id="@+id/txt_campus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="1"
+            app:layout_row="17" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faculty Name"
+            app:layout_column="1"
+            app:layout_row="18" />
+
+        <EditText
+            android:id="@+id/txt_faculty_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_column="1"
+            app:layout_row="19" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Challan Date"
+            app:layout_column="1"
+            app:layout_row="20" />
+
+        <Button
+            android:id="@+id/btn_save_form"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Save"
+            app:layout_column="1"
+            app:layout_row="23" />
+
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="5" />
+
+        <Spinner
+            android:id="@+id/spinner_marital_status"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="7" />
+
+        <Spinner
+            android:id="@+id/spinner_religion"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="9" />
+
+        <Spinner
+            android:id="@+id/spinner_blood_group"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="9" />
+
+        <Spinner
+            android:id="@+id/spinner_program"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="17" />
+
+        <EditText
+            android:id="@+id/txt_challan_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_column="1"
+            app:layout_row="21" />
+
+        <EditText
+            android:id="@+id/txt_uog_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_column="0"
+            app:layout_row="13" />
+
+        <EditText
+            android:id="@+id/txt_personal_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_column="1"
+            app:layout_row="13" />
+
+        <EditText
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_column="0"
+            app:layout_row="7" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="Please Input following data"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
