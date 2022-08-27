@@ -82,21 +82,20 @@ public class HomeActivity extends AppCompatActivity {
 
         delete_record = findViewById(R.id.btn_delete);
         txt_roll_no_to_delete = findViewById(R.id.txt_get_roll_no_for_delete);
-        delete_record.setOnClickListener(v -> {
 
+        delete_record.setOnClickListener(v -> {
             String roll_no_to_delete = txt_roll_no_to_delete.getText().toString();
 
             int listLenght = list.size();
             for (int i = 0; i < listLenght; i++) {
                 if (list.get(i).getRoll_no().contains(roll_no_to_delete)) {
 
-
-
                     Boolean isDeleteSuccess = db.deleteUserData(roll_no_to_delete);
                     if(isDeleteSuccess){
                         list.remove(i);
-                        adapter.notifyItemRemoved(i);
-                        adapter.notifyItemRangeChanged(i,listLenght);
+//                        adapter.notifyItemRemoved(i);
+//                        adapter.notifyItemRangeChanged(i,listLenght);
+                        adapter.notifyDataSetChanged();
                         Toast.makeText(HomeActivity.this, "Record deleted!!", Toast.LENGTH_SHORT).show();
                         txt_roll_no_to_delete.setText("");
                     }

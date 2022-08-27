@@ -20,9 +20,9 @@ public class RegisterUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_form);
 
-        username = findViewById(R.id.edittxtuserreg);
-        password = findViewById(R.id.edittxtpassreg);
-        repassword = findViewById(R.id.edittxtpassregrepeat);
+        username = findViewById(R.id.et_username);
+        password = findViewById(R.id.et_password);
+        repassword = findViewById(R.id.et_confirm_password);
 
 
 
@@ -31,7 +31,7 @@ public class RegisterUserActivity extends AppCompatActivity {
 
 
 
-        findViewById(R.id.btnRegAuthreg).setOnClickListener(v ->{
+        findViewById(R.id.button_new_signup).setOnClickListener(v ->{
             String user = username.getText().toString();
             String pass = password.getText().toString();
             String repass = repassword.getText().toString();

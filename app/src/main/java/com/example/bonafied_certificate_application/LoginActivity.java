@@ -17,16 +17,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_form);
 
-        username = findViewById(R.id.editEmail);
-        password = findViewById(R.id.editPassword);
+        username = findViewById(R.id.et_username);
+        password = findViewById(R.id.et_password);
 
-        btnLogin = findViewById(R.id.buttonLogin);
+        btnLogin = findViewById(R.id.button_new_signup);
         DB = new LoginAuthDB(this);
-        findViewById(R.id.buttonRegister).setOnClickListener(v ->{
+        findViewById(R.id.button_signup).setOnClickListener(v ->{
             Intent intent = new Intent(LoginActivity.this, RegisterUserActivity.class);
             startActivity(intent);
         });
-        findViewById(R.id.buttonLogin).setOnClickListener(v ->{
+        findViewById(R.id.button_new_signup).setOnClickListener(v ->{
             String user = username.getText().toString();
             String pass = password.getText().toString();
 

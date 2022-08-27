@@ -89,57 +89,23 @@ public class InputFormStep1 extends AppCompatActivity {
         save_record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                int sessionn = 0;
-//                int challanno = 0;
-//
-//                try {
-//                    sessionn = Integer.parseInt(session.getText().toString());
-//                    challanno = Integer.parseInt(challan_no.getText().toString());
-//
-//                } catch(NumberFormatException nfe) {
-//                    System.out.println("Could not parse " + nfe);
-//                }
 
-//                Student newStudent = new Student(
-//                        student_name.getText().toString(),
-//                        father_name.getText().toString(),
-//                        Integer.parseInt( String.valueOf(dropdown_gender.getSelectedItemPosition())),
-//                        Integer.parseInt( String.valueOf(dropdown_marital_status.getSelectedItemPosition())),
-//                        Integer.parseInt( String.valueOf(dropdown_religion.getSelectedItemPosition())),
-//                        Integer.parseInt( String.valueOf(dropdown_blood_group.getSelectedItemPosition())),
-//                        cnic_no.getText().toString(),
-//                        address.getText().toString(),
-//                        ptcl_no.getText().toString(),
-//                        cell_no.getText().toString(),
-//                        uog_email.getText().toString(),
-//                        personal_email.getText().toString(),
-//                        degree_title.getText().toString(),
-//                        roll_no.getText().toString(),
-//                        registration_no.getText().toString(),
-//                        sessionn,
-//                        Integer.parseInt(String.valueOf(dropdown_program.getSelectedItemPosition())),
-//                        campus_name.getText().toString(),
-//                        department_name.getText().toString(),
-//                        faculty_name.getText().toString(),
-//                        challanno,
-//                        challan_date.getText().toString(),
-//                        degree_status.getText().toString()
-//                        );
 
 
                 Intent intent = new Intent();
 
                 intent.putExtra("student_name", student_name.getText().toString());
                 intent.putExtra("father_name",  father_name.getText().toString());
-//                intent.putExtra("gender",String.valueOf(dropdown_gender.getSelectedItemPosition()));
-//                intent.putExtra("marital_status", String.valueOf(dropdown_marital_status.getSelectedItemPosition()));
-//                intent.putExtra("religion", String.valueOf(dropdown_religion.getSelectedItemPosition()));
-//                intent.putExtra("blood_group", String.valueOf(dropdown_blood_group.getSelectedItemPosition()));
 
-                intent.putExtra("gender","0");
-                intent.putExtra("marital_status", "2");
-                intent.putExtra("religion", "2");
-                intent.putExtra("blood_group", "2");
+                intent.putExtra("gender",String.valueOf(dropdown_gender.getSelectedItemPosition()));
+                intent.putExtra("marital_status", String.valueOf(dropdown_marital_status.getSelectedItemPosition()));
+                intent.putExtra("religion", String.valueOf(dropdown_religion.getSelectedItemPosition()));
+                intent.putExtra("blood_group", String.valueOf(dropdown_blood_group.getSelectedItemPosition()));
+
+//                intent.putExtra("gender","0");
+//                intent.putExtra("marital_status", "2");
+//                intent.putExtra("religion", "2");
+//                intent.putExtra("blood_group", "2");
 
                 intent.putExtra("cnic_no",cnic_no.getText().toString());
                 intent.putExtra("address",address.getText().toString());
@@ -152,14 +118,14 @@ public class InputFormStep1 extends AppCompatActivity {
                 intent.putExtra("registration_no",registration_no.getText().toString());
                 intent.putExtra("session",session.getText().toString());
 
-                intent.putExtra("program","2");
+//                intent.putExtra("program","2");
 
-//                intent.putExtra("program",String.valueOf(dropdown_program.getSelectedItemPosition()));
+                intent.putExtra("program",String.valueOf(dropdown_program.getSelectedItemPosition()));
                 intent.putExtra("campus_name",campus_name.getText().toString());
                 intent.putExtra("department_name",department_name.getText().toString());
                 intent.putExtra("faculty_name",faculty_name.getText().toString());
 
-                intent.putExtra("challan_no","5");
+                intent.putExtra("challan_no",challan_no.getText().toString());
 
                 intent.putExtra("challan_date",challan_date.getText().toString());
                 intent.putExtra("degree_status",degree_status.getText().toString());
