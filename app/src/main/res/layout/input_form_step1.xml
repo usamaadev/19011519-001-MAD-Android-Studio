@@ -350,7 +350,7 @@
 
         <Button
             android:id="@+id/btn_save_form"
-            android:layout_width="108dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
@@ -430,19 +430,20 @@
             app:layout_column="0"
             app:layout_row="7" />
 
+        <Button
+            android:id="@+id/button_dummy_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add dummy"
+            app:layout_column="0"
+            app:layout_row="25"
+
+            />
+
     </androidx.gridlayout.widget.GridLayout>
 
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
-        android:text="Please Input following data"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

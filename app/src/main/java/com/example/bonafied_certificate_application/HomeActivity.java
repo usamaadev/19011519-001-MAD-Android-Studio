@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -28,6 +30,10 @@ public class HomeActivity extends AppCompatActivity {
     List<Student> list = new ArrayList<>();
     Button  delete_record;
     EditText txt_roll_no_to_delete;
+    TableLayout table;
+    TableLayout tablerow;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,17 +99,20 @@ public class HomeActivity extends AppCompatActivity {
                     Boolean isDeleteSuccess = db.deleteUserData(roll_no_to_delete);
                     if(isDeleteSuccess){
                         list.remove(i);
-//                        adapter.notifyItemRemoved(i);
-//                        adapter.notifyItemRangeChanged(i,listLenght);
                         adapter.notifyDataSetChanged();
                         Toast.makeText(HomeActivity.this, "Record deleted!!", Toast.LENGTH_SHORT).show();
                         txt_roll_no_to_delete.setText("");
                     }
+                }else{
+                    Toast.makeText(HomeActivity.this, "No record found with the given Roll No. (Try to input correctly)", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+
     }
+
+
 
     private void setRecyclerView() {
         recycler_view.setHasFixedSize(true);
@@ -111,6 +120,7 @@ public class HomeActivity extends AppCompatActivity {
         adapter = new StudentAdapter(this, list);
         recycler_view.setAdapter(adapter);
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -120,6 +130,9 @@ public class HomeActivity extends AppCompatActivity {
         {
             if(resultCode != RESULT_CANCELED) {
 
+                assert data != null;
+//                Student newStudentObj = data.getParcelableExtra("newStudent");
+//
                 String student_name = data.getStringExtra("student_name");
                 String father_name = data.getStringExtra("father_name");
                 String gender = data.getStringExtra("gender");
@@ -145,14 +158,26 @@ public class HomeActivity extends AppCompatActivity {
                 String degree_status = data.getStringExtra("degree_status");
 
                 list.add(new Student(
-                         student_name,  father_name
-                        ,
-                        Integer.parseInt(gender),  Integer.parseInt(marital_status),  Integer.parseInt(religion),  Integer.parseInt(blood_group),  cnic_no,  address,
-                         ptcl_no,  cell_no,  uog_email,  personal_email,  degree_title,  roll_no,  registration_no,  Integer.parseInt(session),
-                        Integer.parseInt(program),  campus_name,  department_name,  faculty_name,  Integer.parseInt(challan_no),  challan_date,  degree_status
-
-
+                         student_name,  father_name,
+                        Integer.parseInt(gender),  Integer.parseInt(marital_status),  Integer.parseInt(religion),
+                        Integer.parseInt(blood_group),  cnic_no,  address,
+                         ptcl_no,  cell_no,  uog_email,  personal_email,
+                        degree_title,  roll_no,  registration_no,  Integer.parseInt(session),
+                        Integer.parseInt(program),  campus_name,  department_name,
+                        faculty_name,  Integer.parseInt(challan_no),  challan_date,
+                        degree_status
                 ));
+
+                Log.i("newStudent","newStudentObj.toString()");
+
+//                list.add(new Student(
+//                        newStudentObj.student_name,newStudentObj.father_name,newStudentObj.gender,newStudentObj.marital_status,
+//                        newStudentObj.religion,newStudentObj.blood_group,newStudentObj.cnic_no,newStudentObj.address,newStudentObj.ptcl_no,newStudentObj.cell_no,newStudentObj.uog_email,
+//                        newStudentObj.personal_email,newStudentObj.degree_title,newStudentObj.roll_no,newStudentObj.registration_no,newStudentObj.session,newStudentObj.program,
+//                        newStudentObj.campus_name,newStudentObj.department_name,newStudentObj.faculty_name,newStudentObj.challan_no,newStudentObj.challan_date,newStudentObj.degree_status
+//                ));
+
+
 
                Boolean checkInsertData = db.insertUserData(
                         student_name,  father_name,
@@ -161,11 +186,13 @@ public class HomeActivity extends AppCompatActivity {
                         Integer.parseInt(program),  campus_name,  department_name,  faculty_name,   Integer.parseInt(challan_no),  challan_date,  degree_status
 
                 );
-
-
-
-                Log.d("data-1", "onCreate: " +checkInsertData);
-
+//                Boolean checkInsertData = db.insertUserData(
+//                        newStudentObj.student_name,newStudentObj.father_name,newStudentObj.gender,newStudentObj.marital_status,
+//                        newStudentObj.religion,newStudentObj.blood_group,newStudentObj.cnic_no,newStudentObj.address,newStudentObj.ptcl_no,newStudentObj.cell_no,newStudentObj.uog_email,
+//                        newStudentObj.personal_email,newStudentObj.degree_title,newStudentObj.roll_no,newStudentObj.registration_no,newStudentObj.session,newStudentObj.program,
+//                        newStudentObj.campus_name,newStudentObj.department_name,newStudentObj.faculty_name,newStudentObj.challan_no,newStudentObj.challan_date,newStudentObj.degree_status
+//                );
+//
                 if (checkInsertData){
                     Toast.makeText(HomeActivity.this, "Data Inserted Successfully!", Toast.LENGTH_SHORT).show();
                 }

@@ -1,8 +1,11 @@
 package com.example.bonafied_certificate_application;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.Date;
 
-public class Student {
+public class Student  implements Parcelable {
     public String student_name;
     public String father_name;
     public int gender;
@@ -113,5 +116,15 @@ public class Student {
                 ", challan_date='" + challan_date + '\'' +
                 ", degree_status='" + degree_status + '\'' +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
     }
 }

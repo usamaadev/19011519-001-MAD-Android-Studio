@@ -89,55 +89,16 @@ public class DBMS extends SQLiteOpenHelper {
         contentValues.put("degree_status", degree_status);
 
 
-
-        //MyDB.insert("FormDetails", null, contentValues);
         long result = MyDB.insert("StudentDetails", null, contentValues);
-        Log.d("data-1", "ininsert: " +result);
-        Log.d("data-1", "ininsert: " +contentValues);
+
+
         if (result == -1)
             return false;
         else
             return true;
     }
 
-//    public boolean updateUserData(String Name, String SoORdo, String RegistrationNo, String RollNo,
-//                                  String Department, String Program, String DegreeStatus, String CGPA,
-//                                  String InstituteWhereStudied, String InstituteMigratedTo, String NocDepositedFee, String ChallanNo,
-//                                  String DepositDate,String Address,String MobileNo,String LandlineOrPTCl,String MobileOfGuardian, String  ModeOfReceive){
-//        SQLiteDatabase MyDB = this.getWritableDatabase();
-//        ContentValues contentValues = new ContentValues();
-//
-//        contentValues.put("Name", Name);
-//        contentValues.put("SoORdo", SoORdo);
-//        contentValues.put("RegistrationNo", RegistrationNo);
-//        contentValues.put("RollNo", RollNo);
-//        contentValues.put("Department", Department);
-//        contentValues.put("Program", Program);
-//        contentValues.put("DegreeStatus", DegreeStatus);
-//        contentValues.put("CGPA", CGPA);
-//        contentValues.put("InstituteWhereStudied", InstituteWhereStudied);
-//        contentValues.put("InstituteMigratedTo", InstituteMigratedTo);
-//        contentValues.put("NocDepositedFee", NocDepositedFee);
-//        contentValues.put("ChallanNo", ChallanNo);
-//        contentValues.put("DepositDate", DepositDate);
-//        contentValues.put("Address", Address);
-//        contentValues.put("MobileNo", MobileNo);
-//        contentValues.put("LandlineOrPTCl", LandlineOrPTCl);
-//        contentValues.put("MobileOfGuardian", MobileOfGuardian);
-//        contentValues.put("ModeOfReceive", ModeOfReceive);
-//
-//        Cursor cursor = MyDB.rawQuery("Select * from FormDetails where RollNo = ?", new String[] {RollNo});
-//
-//        if (cursor.getCount() > 0) {
-//            long result = MyDB.update("FormDetails", contentValues, "RollNo=?", new String[]{RollNo});
-//            if (result == -1)
-//                return false;
-//            else
-//                return true;
-//        }else {
-//            return false;
-//        }
-//    }
+
 
     public boolean deleteUserData(String rollNotodel){
         SQLiteDatabase MyDB = this.getWritableDatabase();
@@ -166,39 +127,4 @@ public class DBMS extends SQLiteOpenHelper {
     }
 
 
-//    public List<Student> ToObject(Cursor cursor){
-//        List<Student> mylist = new ArrayList<>();
-//        while (cursor.moveToNext()){
-//            Student obj = new Student(
-//                    cursor.getString(0),
-//                    cursor.getString(1),
-//                    cursor.getInt(2),
-//                    cursor.getInt(3),
-//                    cursor.getInt(4),
-//                    cursor.getInt(5),
-//                    cursor.getString(6),
-//                    cursor.getString(7),
-//                    cursor.getString(8),
-//                    cursor.getString(9),
-//                    cursor.getString(10),
-//                    cursor.getString(11),
-//                    cursor.getString(12),
-//                    cursor.getString(13),
-//                    cursor.getString(14),
-//                    cursor.getInt(15),
-//                    cursor.getInt(16),
-//                    cursor.getString(17),
-//                    cursor.getString(18),
-//                    cursor.getString(19),
-//                    cursor.getInt(20),
-//                    cursor.getString(21),
-//                    cursor.getString(22));
-//
-//
-//
-//            mylist.add(obj);
-//
-//        }
-//        return mylist;
-//    }
 }

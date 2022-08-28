@@ -1,11 +1,17 @@
 package com.example.bonafied_certificate_application;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.content.Context;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Switch;
+import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +23,6 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
 
     Context context;
     public List<Student> student_list;
-
     public StudentAdapter(Context context, List<Student> student_list){
         this.context = context;
         this.student_list = student_list;
@@ -33,6 +38,9 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+
+        Student mydata=student_list.get(position);
 
         if (student_list != null && student_list.size() > 0) {
 
@@ -101,42 +109,68 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
             holder.tv_name.setText(student_list.get(position).student_name);
             holder.tv_father_name.setText(student_list.get(position).father_name);
             holder.tv_registration_no.setText(student_list.get(position).registration_no);
-
-//            holder.tv_gender.setText(String.valueOf(student_list.get(position).gender));
             holder.tv_gender.setText(gender);
-
             holder.tv_cnic_no.setText(student_list.get(position).cnic_no);
             holder.tv_address.setText(student_list.get(position).address);
-
-//            holder.tv_marital_status.setText(String.valueOf( student_list.get(position).marital_status));
             holder.tv_marital_status.setText(marital_status);
-
             holder.tv_religion.setText(religion);
-//            holder.tv_religion.setText(String.valueOf(student_list.get(position).religion));
-
-//            holder.tv_blood_group.setText(String.valueOf(student_list.get(position).blood_group));
             holder.tv_blood_group.setText(blood_group);
-
             holder.tv_ptcl_no.setText(student_list.get(position).ptcl_no);
             holder.tv_cell_no.setText(student_list.get(position).cell_no);
             holder.tv_uog_email.setText(student_list.get(position).uog_email);
             holder.tv_personal_email.setText(student_list.get(position).personal_email);
             holder.tv_degree_title.setText(student_list.get(position).degree_title);
             holder.tv_session.setText(String.valueOf( student_list.get(position).session));
-
             holder.tv_program.setText(program);
-//            holder.tv_program.setText(String.valueOf(student_list.get(position).program));
-
             holder.tv_campus_name.setText(student_list.get(position).campus_name);
             holder.tv_department_name.setText(student_list.get(position).department_name);
             holder.tv_faculty_name.setText(student_list.get(position).faculty_name);
             holder.tv_challan_no.setText(String.valueOf(student_list.get(position).challan_no));
             holder.tv_challan_date.setText(student_list.get(position).challan_date);
             holder.tv_degree_status.setText(student_list.get(position).degree_status);
+
+            holder.tb.setOnClickListener(v->{
+
+                Intent intent = new Intent(context, InputFormStep1.class);
+
+//                intent.putExtra("data", (Parcelable) mydata);
+                intent.putExtra("pos", position);
+                intent.putExtra("student_name", mydata.student_name);
+                intent.putExtra("father_name", mydata.father_name);
+                intent.putExtra("gender", mydata.gender);
+                intent.putExtra("marital_status", mydata.marital_status);
+                intent.putExtra("religion",mydata.religion);
+                intent.putExtra("blood_group", mydata.blood_group);
+                intent.putExtra("cnic_no", mydata.cnic_no);
+                intent.putExtra("address", mydata.address);
+                intent.putExtra("ptcl_no", mydata.ptcl_no);
+                intent.putExtra("cell_no", mydata.cell_no);
+                intent.putExtra("uog_email", mydata.uog_email);
+                intent.putExtra("personal_email", mydata.personal_email);
+                intent.putExtra("degree_title", mydata.degree_title);
+                intent.putExtra("roll_no", mydata.roll_no);
+                intent.putExtra("registration_no", mydata.registration_no);
+                intent.putExtra("session", mydata.session);
+                intent.putExtra("program", mydata.program);
+                intent.putExtra("campus_name", mydata.campus_name);
+                intent.putExtra("department_name", mydata.department_name);
+                intent.putExtra("faculty_name", mydata.faculty_name);
+                intent.putExtra("challan_no", mydata.challan_no);
+                intent.putExtra("challan_date", mydata.challan_date);
+                intent.putExtra("degree_status", mydata.degree_status);
+
+                context.startActivity(intent);
+
+                Toast.makeText(context, "clicked on row", Toast.LENGTH_SHORT).show();
+            });
+
         } else {
             return;
         }
     }
+
+
+
 
     @Override
     public int getItemCount() {
@@ -152,6 +186,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
                 tv_personal_email, tv_degree_title, tv_session, tv_program,
                 tv_campus_name, tv_department_name, tv_faculty_name, tv_challan_no, tv_challan_date, tv_degree_status;
 
+        TableLayout tb;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -181,6 +216,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
             tv_challan_no = itemView.findViewById(R.id.tv_challan_no);
             tv_challan_date = itemView.findViewById(R.id.tv_challan_date);
             tv_degree_status = itemView.findViewById(R.id.tv_degree_status);
+            tb=itemView.findViewById(R.id.singlerow);
         }
     }
 }
