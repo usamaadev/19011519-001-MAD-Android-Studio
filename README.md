@@ -1,6 +1,6 @@
 # UOGStudentApp
 
-![Screenshot_2022-08-31-00-18-04-033_com example bonafied_certificate_application](https://user-images.githubusercontent.com/56690325/187524824-d143bfb0-097f-4fb9-b298-ceb15a3cda4a.jpg)
+![Screenshot_2022-08-31-00-18-04-033_com example bonafied_certificate_application](https://user-images.githubusercontent.com/56690325/187524824-d143bfb0-097f-4fb9-b298-ceb15a3cda4a.jpg =360x780)
 
 
 ![Screenshot_2022-08-31-00-18-01-448_com example bonafied_certificate_application](https://user-images.githubusercontent.com/56690325/187524850-eb1c08fe-d6ea-48bf-bfad-609d680c84c0.jpg)
